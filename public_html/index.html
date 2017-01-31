@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="stylesheet" href="stylesheet.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Modal.js"></script>
+        <style>
+            body {background-color:#a4c2f4;}
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <a href="index.html">
+                <img src='http://piskel-imgstore-b.appspot.com/img/bc7bbc28-bc02-11e6-9dde-fd15ed4917e5.gif' height='60' width='60'>
+            </a>
+            <a href="logOut.html" class="user">
+                <button>Log Out</button>
+            </a>
+        </header>
+        
+        <div class="container-fluid">
+            
+                <div class="col-lg-3 col-md-4 col-sm-5 hidden-xs" data-spy="scroll">
+                    
+                    <table style=" border: 1px solid black; background-color:#f2f2f2;" class="topTable">
+                        <thead>
+                            <th>Name</th>
+                            <th>First Name</th>
+                            <th>Phone #</th>
+                        </thead>
+                    </table>
+                    <div class="bodycontainer scrollable" >    
+                        <table style="background-color:#f3f3f3;" >
+                            <tbody class="bottomTable" >
+                                <tr>
+                                    <td th:text="${rec.LastName}+','"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="${rec.FirstName}"></td>
+                                </tr>
+                                <tr>
+                                    <td th:text="${rec.Number}"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-10 col-md-5 col-sm-5 col-xs-5">
+                             
+                            <div class="text-center" style="padding-top:10px;">
+                                <div class="centerBlock">
+                                    
+                                    <!-- Trigger/Open The Modal -->
+                                    <button id="myBtn">-----Edit-----</button>
+
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+
+                                      <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">X</span>
+                                            <p>What do i do?</p>
+                                        </div>
+                                        <div class="modal-header">
+                                            <span class="close">&times;</span>
+                                            <h2>Modal Header</h2>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Pls Work</p>
+                                            <p>Hi</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <h3>Modal Footer</h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <font size="2" id="credits">© APA Computer Club 2016-2017</font>        
+                        
+                </div>
+                <form id="Msg">
+                    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                        <div class="row">
+                    
+                                <div class="form-group" >
+                                    <textarea id="exampleInputEmail" placeholder="Type Message Here" class="form-control" style="background-color:#ff; color:black;"></textarea>
+                                </div>
+
+                        </div>
+                        <div class="row">
+                        
+                            <div class="text-center">
+                                <div class="centerBlock">
+                                    <input type="submit" value="Send">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </form>
+        </div>
+        
+    </body>
+</html>
